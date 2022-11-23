@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.miniprajet.CreateAccount"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView fitHeight="165.0" fitWidth="159.0" layoutX="404.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../img/users.png" />
+            </image>
+        </ImageView>
+        <Pane layoutX="363.0" layoutY="225.0" prefHeight="119.0" prefWidth="200.0">
+            <children>
+                <Label layoutX="51.0" layoutY="39.0" text="SIGN UP" textAlignment="CENTER" textFill="#211b79">
+                    <font>
+                        <Font name="Arial Bold" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane prefHeight="450.0" prefWidth="354.0" styleClass="left-side-background" stylesheets="@../../../values/style.css">
+            <children>
+                <Label layoutX="115.0" layoutY="21.0" text="Regestration Form" textFill="#160575">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="70.0" layoutY="48.0" text="Fill the form to create a new account " textFill="#3c0790">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="32.0" layoutY="134.0" text="Name">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtname" layoutX="124.0" layoutY="131.0" prefHeight="25.0" prefWidth="200.0" />
+                <TextField fx:id="txtuser" layoutX="124.0" layoutY="181.0" prefHeight="25.0" prefWidth="200.0" />
+                <Label layoutX="31.0" layoutY="184.0" text="Username">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="32.0" layoutY="238.0" text="Password">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="txtpass" layoutX="124.0" layoutY="235.0" prefHeight="25.0" prefWidth="200.0" />
+                <Label layoutX="8.0" layoutY="298.0" text="Confirm Password">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="txtconfirm" layoutX="124.0" layoutY="295.0" prefHeight="25.0" prefWidth="200.0" />
+                <Button fx:id="btncreate" layoutX="115.0" layoutY="375.0" mnemonicParsing="false" onAction="#createnew" prefHeight="34.0" prefWidth="122.0" styleClass="border" stylesheets="@../../../values/style.css" text="Create New" textFill="#240790">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

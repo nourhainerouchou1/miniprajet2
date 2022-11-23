@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprajet.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="270.0" styleClass="left-side-background" stylesheets="@../../../values/style.css">
+         <children>
+            <Pane prefHeight="114.0" prefWidth="270.0" styleClass="left-side-background" stylesheets="@../../../../java/values/style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label layoutX="32.0" layoutY="36.0" text="ALLO DOCTOR" textFill="#211b79">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="289.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/doctor.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="85.0" prefWidth="270.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="431.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="36.0" prefWidth="254.0">
+               <children>
+                  <Button fx:id="btncross" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#setOnMouseClicked" prefHeight="33.0" prefWidth="39.0" styleClass="transparent" stylesheets="@../../../values/style.css">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/cross1.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane prefHeight="60.0" prefWidth="431.0">
+               <children>
+                  <Label fx:id="errormsglabel" alignment="CENTER" layoutY="-5.0" prefHeight="57.0" prefWidth="431.0" textFill="#f20000">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <HBox prefHeight="36.0" prefWidth="431.0">
+               <children>
+                  <Pane prefHeight="32.0" prefWidth="49.0" stylesheets="@../../../../resources/values/style.css">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="9.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="right-side-border" />
+                     </styleClass>
+                  </Pane>
+                  <TextField fx:id="tfusername" prefHeight="36.0" prefWidth="236.0" promptText="UserName" styleClass="transparent" stylesheets="@../../../../resources/values/style.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="40.0" />
+               </VBox.margin>
+               <stylesheets>
+                  <URL value="@../../../values/style.css" />
+                  <URL value="@../../../values/style.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="border" />
+                  <String fx:value="border" />
+               </styleClass>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="431.0">
+               <children>
+                  <Pane prefHeight="32.0" prefWidth="49.0" stylesheets="@../../../../resources/values/style.css">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="11.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/pass.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="right-side-border" />
+                     </styleClass>
+                  </Pane>
+                  <PasswordField fx:id="pfpassword" prefHeight="25.0" prefWidth="258.0" promptText="Password" styleClass="transparent" />
+                  <Button fx:id="btnhide" alignment="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="23.0" styleClass="transparent">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/visible.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="30.0" />
+               </VBox.margin>
+               <stylesheets>
+                  <URL value="@../../../values/style.css" />
+                  <URL value="@../../../values/style.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="border" />
+                  <String fx:value="border" />
+               </styleClass>
+            </HBox>
+            <Button fx:id="btnlogin" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="331.0" text="Login" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../../values/style.css" />
+                  <URL value="@../../../values/style.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="left-side-background" />
+                  <String fx:value="left-side-background" />
+               </styleClass>
+            </Button>
+            <Hyperlink fx:id="lblfor" alignment="CENTER" onAction="#handlForget" prefHeight="21.0" prefWidth="364.0" text="Forget password ?" textFill="#3b59bc" >
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
+            </Hyperlink>
+            <Pane prefHeight="88.0" prefWidth="431.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="127.0" layoutY="30.0" styleClass="transparent" stylesheets="@../../../values/style.css" text="Create account ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="labelsignup" alignment="CENTER" layoutX="224.0" layoutY="28.0" styleClass="transparent" stylesheets="@../../../values/style.css" text="Sign Up" textFill="RED" onAction="#handlSignUp">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Hyperlink>
+               </children></Pane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
