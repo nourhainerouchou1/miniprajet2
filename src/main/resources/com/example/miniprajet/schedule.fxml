@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprajet.schedule">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="143.0" styleClass="left-side-background" stylesheets="@../../../values/style.css">
+         <children>
+            <Pane prefHeight="121.0" prefWidth="190.0" />
+            <ImageView fitHeight="164.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/acc.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="153.0" prefWidth="145.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/icons8-message-téléphonique-48.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink layoutX="52.0" layoutY="116.0" onAction="#contact" styleClass="transparent" text="Contact As" textFill="#211b79">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <DatePicker fx:id="datepick" layoutX="227.0" layoutY="45.0" onAction="#pick" prefHeight="46.0" prefWidth="327.0" promptText="Pick a date " styleClass="border" stylesheets="@../../../values/style.css" />
+      <TableView fx:id="tablerdv" layoutX="145.0" layoutY="169.0" prefHeight="233.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="nomcol" prefWidth="78.0" text="Nom" />
+          <TableColumn fx:id="prenomcol" prefWidth="72.0" text="Prenom" />
+            <TableColumn fx:id="datecol" prefWidth="84.0" text="Date RDV" />
+            <TableColumn fx:id="heurecol" minWidth="4.0" prefWidth="88.0" text="Heure RDV" />
+            <TableColumn fx:id="commentairecol" minWidth="0.0" prefWidth="97.0" text="Commentaire" />
+            <TableColumn fx:id="idcol" prefWidth="58.0" text="id RDV" />
+            <TableColumn prefWidth="85.0" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.miniprajet.aceuil"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <DatePicker fx:id="dtpicker" layoutX="101.0" layoutY="54.0" prefHeight="61.0" prefWidth="398.0" promptText="Date " stylesheets="@../../../values/style.css">
+            <styleClass>
+                <String fx:value="border" />
+                <String fx:value="right-side-border" />
+            </styleClass>
+        </DatePicker>
+        <Button fx:id="btndate" layoutX="266.0" layoutY="146.0" mnemonicParsing="false" onAction="#onDate" text="Button" />
+        <Label fx:id="lbldate" layoutX="94.0" layoutY="210.0" text="------" />
+    </children>
+</AnchorPane>
